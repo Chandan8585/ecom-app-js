@@ -113,3 +113,105 @@ a{
 .person{
     font-size: 100px;
 }
+
+
+
+
+/* Category */
+.category-cards{
+  background-image: url("./assets/furniture.png");
+  width: 100px;
+  height: 200px;
+}
+#products{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-image{
+  object-fit:contain;
+}
+.card-image-container{
+  height: 200px;
+  padding: 4px;
+ 
+}
+.cart-img{
+ width: 30px;
+ /* color: white; */
+ background: transparent;
+}
+.button{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* footer */
+footer{
+padding: 20px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+}
+
+.cartImageinhor{
+width: 20px;
+}
+
+
+
+.main {
+  padding-top: 8rem;
+}
+
+.heading-2 {
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.final-price {
+  width: 25rem;
+  background-color: var(--card-background);
+  align-self: flex-start;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.side-bar {
+  width: 20rem;
+  position: fixed;
+}
+
+.product-container {
+  margin-left: 21rem;
+}
+
+.heading-3 {
+  padding: 10px 0;
+}
+
+.filter-container {
+  padding: 1rem 0;
+}
+
+.label {
+  font-size: 1.25rem;
+}
+.radio {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.wishlist{
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  height: 4px;
+  width: 10px;
+}
