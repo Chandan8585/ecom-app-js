@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" />
+    
 </head>
 <body>
     <nav class="logo">
@@ -30,14 +33,16 @@
                 favorite_border
                 </span></a>
             
-                    <span class="material-icons-outlined">
-                        shopping_cart
-                        </span>
+                <a href=""><span class="material-icons-outlined">
+                  shopping_cart
+                  </span></a>
                 
             <button class="button btn-primary">Log in</button>
           </div>
-   
     </nav>
+    
+    <div class="product-container d-flex wrap gap" id="products"></div>
+  
 </body>
-<script src="./index.js"></script>
+<script type="module" src="./index.js"></script>
 </html>
