@@ -1,6 +1,6 @@
 import { createCardContainer } from "./createCardContainer.js";
 import { findProductInCart } from "./utils/findProductInCart.js";
-import { createHorizontalProductCard } from "./horizontalProductCard.js";
+import { createHorizontalProductCard } from "./horizontalCardContainer.js";
 const cartContainer = document.getElementById("cart");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
