@@ -3,13 +3,11 @@ import { createCardContainer } from "./createCardContainer.js";
 import { findProductInCart } from "./utils/findProductInCart.js";
 
 
-
+const filterContainer = document.getElementById("side-bar");
 const productContainer = document.getElementById("products");
 
 let cart = JSON.parse(localStorage.getItem("cart"))||[];
 let isProductInCart;
-
-
 
 productContainer.addEventListener("click", (event)=> {
     
@@ -34,4 +32,33 @@ productContainer.addEventListener("click", (event)=> {
   }
   
 })
+
+
+filterContainer.addEventListener("click", (event)=> {
+    const updatedProducts = products.filter(({rating})=> rating > event.target.dataset.rating);
+    productContainer.innerHTML = "";
+
+    createCardContainer(updatedProducts, productContainer, findProductInCart, "productPage");
+})
+
+let search = document.getElementById("search-input");
+function capitalizeFirstLetter(str){
+    const words = str.split(" ");
+
+for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+}
+    return words.join(" ");
+}
+search.addEventListener("input", (event)=> {
+         let searched = event.target.value;
+         let searchText = capitalizeFirstLetter(searched);
+         console.log(searchText);
+        let searchedProducts = products.filter(({name})=> name.includes(searchText));
+        productContainer.innerHTML = "";
+  createCardContainer(searchedProducts, productContainer, findProductInCart, "productPage");
+})
+
 createCardContainer(products, productContainer, findProductInCart, "productPage");
+
+
